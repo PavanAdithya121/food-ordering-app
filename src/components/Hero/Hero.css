@@ -1,0 +1,25 @@
+.hero {
+height: 80vh;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 20px;
+}
+
+.hero-content h1 {
+font-size: 3rem;
+margin-bottom: 20px;
+}
+
+.hero-content p {
+font-size: 1.2rem;
+margin-bottom: 20px;
+}
+
+.hero-content button {
+padding: 12px 24px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+}
