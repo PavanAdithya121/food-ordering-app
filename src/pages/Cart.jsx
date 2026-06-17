@@ -5,7 +5,7 @@ function Cart() {
   const { cartItems, increaseQuantity, decreaseQuantity, totalItems, totalPrice } = useCart();
 
   return (
-    <main className="page-center cart-page">
+    <main className="cart-page">
       <div className="cart-header">
         <div>
           <h1>Your Cart</h1>
