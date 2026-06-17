@@ -5,12 +5,18 @@ function FoodCard({ item, quantity = 0, onAdd, onDecrease }) {
     <div className="food-card">
       <img src={item.image} alt={item.name} />
       <div className="food-card-details">
-        <h3>{item.name}</h3>
+        <div className="food-card-topline">
+          <h3>{item.name}</h3>
+          {item.popular && <span className="food-card-tag">Popular</span>}
+        </div>
         <p>{item.category}</p>
       </div>
       <div className="food-card-footer">
         <div>
-          <h4>₹{item.price}</h4>
+          <div className="price-line">
+            <h4>₹{item.price}</h4>
+            {item.popular && <span className="rating-pill">★ {item.rating || 4.8}</span>}
+          </div>
           {quantity > 0 && <span className="quantity-badge">{quantity} in cart</span>}
         </div>
         <div className="card-actions">

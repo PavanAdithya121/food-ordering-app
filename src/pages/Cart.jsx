@@ -3,6 +3,9 @@ import { useCart } from "../context/CartContext";
 
 function Cart() {
   const { cartItems, increaseQuantity, decreaseQuantity, totalItems, totalPrice } = useCart();
+  const freeDeliveryTarget = 250;
+  const progress = Math.min((totalPrice / freeDeliveryTarget) * 100, 100);
+  const remaining = Math.max(freeDeliveryTarget - totalPrice, 0);
 
   return (
     <main className="cart-page">
@@ -56,6 +59,12 @@ function Cart() {
               <div className="summary-row">
                 <span>Subtotal</span>
                 <strong>₹{totalPrice}</strong>
+              </div>
+              <div className="delivery-progress">
+                <span>{remaining > 0 ? `Add ₹${remaining} more for free delivery` : "You qualify for free delivery!"}</span>
+                <div className="progress-bar">
+                  <div className="progress-fill" style={{ width: `${progress}%` }} />
+                </div>
               </div>
               <Link to="/checkout" className="primary-button">
                 Checkout now

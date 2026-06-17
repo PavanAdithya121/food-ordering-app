@@ -25,10 +25,47 @@
   letter-spacing: -0.03em;
 }
 
+.food-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.food-card-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(251, 113, 133, 0.12);
+  color: #be123c;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 .food-card p {
   margin: 0;
   color: #6b7280;
   font-size: 0.95rem;
+}
+
+.price-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #1d4ed8;
+  font-size: 0.85rem;
+  font-weight: 700;
 }
 
 .food-card h4 {

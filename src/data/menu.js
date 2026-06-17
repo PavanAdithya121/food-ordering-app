@@ -4,6 +4,8 @@ const menuItems = [
     name: "Mysore Masala Dosa",
     category: "Dessert",
     price: 80,
+    popular: true,
+    rating: 4.9,
     image: "https://images.unsplash.com/photo-1694849789325-914b71ab4075?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bXlzb3JlJTIwbWFzYWxhJTIwZG9zYXxlbnwwfHwwfHx8MA%3D%3D"
   },
   {
@@ -144,6 +146,8 @@ const menuItems = [
     name: "Gobi Manchurian",
     category: "Chinese",
     price: 140,
+    popular: true,
+    rating: 4.8,
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbmcDNUwLuttigDmERmbdGD99gTskUVIyF8ETUEBBf4SO1AlcDoJKFR_mv&s=10"
   },
   {
@@ -186,6 +190,8 @@ const menuItems = [
     name: "Veg Biryani",
     category: "Rice",
     price: 180,
+    popular: true,
+    rating: 4.9,
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj22-TLBBmDCmL4fdTyqTALjac_5gHK5vfNBDquWiKhtlCD7ULsAfXw14&s=10"
   },
   {

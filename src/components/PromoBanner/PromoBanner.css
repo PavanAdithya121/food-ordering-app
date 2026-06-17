@@ -1,0 +1,44 @@
+.promo-banner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) auto;
+  gap: 24px;
+  align-items: center;
+  padding: 28px;
+  margin: 24px 0 36px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(251, 113, 133, 0.08));
+  border: 1px solid rgba(249, 115, 22, 0.18);
+}
+
+.promo-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(251, 113, 133, 0.16);
+  color: #b45309;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.promo-copy h2 {
+  margin: 12px 0 10px;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.promo-copy p {
+  margin: 0;
+  color: #475569;
+}
+
+.promo-button {
+  padding: 16px 28px;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #f97316, #fb7185);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  min-width: 180px;
+}

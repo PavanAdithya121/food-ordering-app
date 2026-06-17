@@ -1,6 +1,13 @@
+.search-wrapper {
+  display: grid;
+  gap: 12px;
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
 .search-bar {
   display: flex;
-  width: min(700px, 100%);
+  width: 100%;
   gap: 10px;
   background: #ffffff;
   border: 1px solid rgba(15, 23, 42, 0.12);
@@ -39,6 +46,31 @@
 .search-button:hover {
   transform: translateY(-1px);
   box-shadow: 0 14px 30px rgba(249, 115, 22, 0.22);
+}
+
+.search-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.suggestion-pill {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.suggestion-pill:hover {
+  background: #f8fafc;
+  transform: translateY(-1px);
 }
 
 .visually-hidden {
