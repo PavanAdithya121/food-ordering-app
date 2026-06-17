@@ -25,5 +25,4 @@ function SearchBar({ query, setQuery, onSearch }) {
     </form>
   );
 }
-
 export default SearchBar;

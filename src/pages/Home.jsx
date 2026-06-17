@@ -7,7 +7,7 @@ import menuItems from "../data/menu";
 import { useCart } from "../context/CartContext";
 
 function Home() {
-  const { addToCart } = useCart();
+  const { cartItems, addToCart, decreaseQuantity } = useCart();
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredItems = useMemo(() => {
@@ -39,11 +39,19 @@ function Home() {
 
         <section className="menu-grid">
           {filteredItems.length > 0 ? (
-            filteredItems.map((item) => (
-              <article key={item.id} className="menu-item-card">
-                <FoodCard item={item} onAdd={() => addToCart(item)} />
-              </article>
-            ))
+            filteredItems.map((item) => {
+              const quantity = cartItems.find((cartItem) => cartItem.id === item.id)?.quantity || 0;
+              return (
+                <article key={item.id} className="menu-item-card">
+                  <FoodCard
+                    item={item}
+                    quantity={quantity}
+                    onAdd={() => addToCart(item)}
+                    onDecrease={() => decreaseQuantity(item.id)}
+                  />
+                </article>
+              );
+            })
           ) : (
             <div className="no-results-card">
               <p>No matching dishes were found. Try another keyword.</p>

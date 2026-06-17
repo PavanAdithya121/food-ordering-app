@@ -32,14 +32,45 @@
 }
 
 .food-card h4 {
-  margin: 8px 0 0;
+  margin: 8px 0 8px;
   color: #111827;
   font-size: 1.15rem;
   font-weight: 700;
 }
 
-.food-card button {
+.quantity-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #1d4ed8;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.food-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
   width: 100%;
+}
+
+.card-actions button {
+  flex: 1;
+  width: auto;
+}
+
+.food-card button {
   padding: 14px 16px;
   border: none;
   border-radius: 16px;
