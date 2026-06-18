@@ -17,4 +17,4 @@ function Hero({ onOrderNow }) {
 
 export default Hero;
 
-export default Hero;
+

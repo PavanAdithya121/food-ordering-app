@@ -7,6 +7,7 @@ import CategoryFilter from "../components/CategoryFilter/CategoryFilter";
 import PromoBanner from "../components/PromoBanner/PromoBanner";
 import menuItems from "../data/menu";
 import { useCart } from "../context/CartContext";
+import Footer from "../components/Footer/Footer";
 
 function Home() {
   const { cartItems, addToCart, decreaseQuantity } = useCart();
@@ -73,6 +74,7 @@ function Home() {
                 <option value="low">Lowest price</option>
                 <option value="high">Highest price</option>
                 <option value="popular">Popular first</option>
+                <option value="free">Free</option>
               </select>
             </div>
           </div>
@@ -104,6 +106,7 @@ function Home() {
           )}
         </section>
       </main>
+      <Footer />
     </>
   );
 }

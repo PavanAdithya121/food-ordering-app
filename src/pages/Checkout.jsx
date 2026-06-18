@@ -5,7 +5,7 @@ function Checkout() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const timer = setTimeout(() => navigate("/payment"), 1200);
+    const timer = setTimeout(() => navigate("/payment"), 3000);
     return () => clearTimeout(timer);
   }, [navigate]);
 

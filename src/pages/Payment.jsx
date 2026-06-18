@@ -7,18 +7,19 @@ function Payment() {
     event.preventDefault();
     navigate("/success");
   };
-
   return (
     <main className="page-center payment-page">
       <div className="payment-card animated-card">
         <h1 className="section-title">Secure Payment</h1>
         <div className="section-divider" />
-        <p>Enter your payment details below to complete your order with confidence.</p>
+        <p>
+          Enter your payment details below to complete your order with
+          confidence.
+        </p>
         <div className="payment-steps">
           <span className="step active">Billing</span>
           <span className="step">Confirmation</span>
         </div>
-
         <form className="payment-form" onSubmit={handleSubmit}>
           <label>
             Card number

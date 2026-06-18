@@ -4,8 +4,8 @@ function PromoBanner() {
   return (
     <section className="promo-banner">
       <div className="promo-copy">
-        <span className="promo-tag">Chef's Choice</span>
-        <h2>Free delivery for orders above ₹250</h2>
+        <span className="promo-tag">Good Choice</span>
+        <h2>Free delivery for orders above ₹199</h2>
         <p>Explore our signature dishes and enjoy fast delivery with a special discount today.</p>
       </div>
       <button type="button" className="promo-button">View featured dishes</button>

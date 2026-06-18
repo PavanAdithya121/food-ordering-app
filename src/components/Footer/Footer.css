@@ -1,0 +1,42 @@
+.footer {
+background-color: #1f2937;
+color: white;
+padding: 40px 20px;
+margin-top: 50px;
+}
+
+.footer-container {
+max-width: 1200px;
+margin: auto;
+text-align: center;
+}
+
+.footer-container h2 {
+margin-bottom: 15px;
+}
+
+.footer-container p {
+margin-bottom: 15px;
+}
+
+.footer-links {
+display: flex;
+justify-content: center;
+gap: 25px;
+margin-bottom: 20px;
+}
+
+.footer-links a {
+color: white;
+text-decoration: none;
+transition: 0.3s;
+}
+
+.footer-links a:hover {
+color: #ff6b35;
+}
+
+.copyright {
+font-size: 14px;
+opacity: 0.8;
+}
