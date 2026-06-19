@@ -1,9 +1,18 @@
-import { createContext, useContext, useMemo, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 const CartContext = createContext(null);
+const STORAGE_KEY = "dinecart_cart";
 
 export function CartProvider({ children }) {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    if (typeof window === "undefined") return [];
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    return stored ? JSON.parse(stored) : [];
+  });
+
+  useEffect(() => {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const addToCart = (item) => {
     setCartItems((prev) => {
@@ -37,6 +46,14 @@ export function CartProvider({ children }) {
     );
   };
 
+  const removeItem = (id) => {
+    setCartItems((prev) => prev.filter((item) => item.id !== id));
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   const totalItems = useMemo(
     () => cartItems.reduce((sum, item) => sum + item.quantity, 0),
     [cartItems]
@@ -47,16 +64,27 @@ export function CartProvider({ children }) {
     [cartItems]
   );
 
+  const freeDeliveryTarget = 199;
+  const deliveryFee = totalPrice > 0 && totalPrice < freeDeliveryTarget ? 29 : 0;
+  const payableTotal = totalPrice + deliveryFee;
+  const remainingForFreeDelivery = Math.max(freeDeliveryTarget - totalPrice, 0);
+
   const value = useMemo(
     () => ({
       cartItems,
       addToCart,
       increaseQuantity,
       decreaseQuantity,
+      removeItem,
+      clearCart,
       totalItems,
       totalPrice,
+      deliveryFee,
+      payableTotal,
+      freeDeliveryTarget,
+      remainingForFreeDelivery,
     }),
-    [cartItems]
+    [cartItems, totalItems, totalPrice, deliveryFee, payableTotal, remainingForFreeDelivery]
   );
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

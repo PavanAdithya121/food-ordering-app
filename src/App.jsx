@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Payment from "./pages/Payment";
+import UpiPayments from "./pages/UpiPayments";
 import Success from "./pages/Success";
 import { CartProvider } from "./context/CartContext";
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/payment/upi" element={<UpiPayments />} />
           <Route path="/success" element={<Success />} />
         </Routes>
       </BrowserRouter>

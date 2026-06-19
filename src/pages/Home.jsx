@@ -55,7 +55,7 @@ function Home() {
             <div className="section-divider" />
             <p>Discover the most delicious meals with a polished ordering experience. Add favorites to your cart and checkout with confidence.</p>
           </div>
-          <PromoBanner />
+          <PromoBanner onViewFeatured={scrollToMenu} />
           <SearchBar query={searchQuery} setQuery={setSearchQuery} onSearch={setSearchQuery} />
           <div className="controls-row">
             <CategoryFilter
