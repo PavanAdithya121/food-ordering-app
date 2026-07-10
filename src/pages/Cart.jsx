@@ -79,6 +79,7 @@ function Cart() {
           </section>
           <br />
           <button
+          id="btnckeck"
             type="button"
             className="primary-button"
             onClick={() => navigate("/checkout")}

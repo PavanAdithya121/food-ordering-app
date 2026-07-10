@@ -176,7 +176,7 @@ const menuItems = [
     name: "Butter Naan",
     category: "North Indian",
     price: 45,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgOVMP2fEMYu-VdHQFY0CkmYVldsFsq00cvSiVwN838g&s=10"
+    image: "https://www.pachakam.com/wp-content/uploads/2009/05/new-butter-naan.jpg"
   },
   {
     id: 26,

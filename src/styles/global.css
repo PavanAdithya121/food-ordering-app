@@ -397,8 +397,18 @@ visibility: hidden;
 
   .clear-cart-button:hover,
   .remove-button:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-1px);
+    /* background: rgba(255, 255, 255, 0.08); */
+    transform: translateY(-3px);
+    
+  }
+  #btnckeck{
+    display: block;
+    text-align: end;
+    margin-left: 1020px;
+    background-color: black;
+    color: orange;
+    height: 50px;
+    border-radius: 10px;
   }
 
   .remove-button {
