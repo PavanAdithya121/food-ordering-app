@@ -403,8 +403,8 @@ visibility: hidden;
   }
   #btnckeck{
     display: block;
-    text-align: end;
-    margin-left: 1020px;
+    text-align: center;
+    margin-left: 90%;
     background-color: black;
     color: orange;
     height: 50px;

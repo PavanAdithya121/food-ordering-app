@@ -84,7 +84,7 @@ function Cart() {
             className="primary-button"
             onClick={() => navigate("/checkout")}
           >
-            Checkout now
+            &nbsp;&nbsp;&nbsp;&nbsp;Checkout&nbsp;&nbsp;&nbsp;
           </button>
               
               <br />
