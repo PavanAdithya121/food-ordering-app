@@ -2,7 +2,7 @@ const menuItems = [
   {
     id: 1,
     name: "Mysore Masala Dosa",
-    category: "Dessert",
+    category: "South Indian",
     price: 80,
     popular: true,
     rating: 4.9,
@@ -176,7 +176,7 @@ const menuItems = [
     name: "Butter Naan",
     category: "North Indian",
     price: 45,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgOVMP2fEMYu-VdHQFY0CkmYVldsFsq00cvSiVwN838g&s=10"
+    image: "https://www.pachakam.com/wp-content/uploads/2009/05/new-butter-naan.jpg"
   },
   {
     id: 26,
@@ -283,7 +283,14 @@ const menuItems = [
   category: "Juice",
   price: 85,
   image: "https://images.unsplash.com/photo-1631065565414-c810ce96f078?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBpbmVhcHBsZSUyMGp1aWNlfGVufDB8fDB8fHww"
-}
+},
+{
+    id: 41,
+    name: "Maggi",
+    category: "Chinese",
+    price: 50,
+    image: "https://vegecravings.com/wp-content/uploads/2020/01/Street-Style-Maggi-Recipe-Step-By-Step-Instructions-10-scaled.jpg"
+  },
 
 ];
 

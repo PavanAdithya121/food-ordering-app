@@ -7,6 +7,7 @@ import CategoryFilter from "../components/CategoryFilter/CategoryFilter";
 import PromoBanner from "../components/PromoBanner/PromoBanner";
 import menuItems from "../data/menu";
 import { useCart } from "../context/CartContext";
+import Footer from "../components/Footer/Footer";
 
 function Home() {
   const { cartItems, addToCart, decreaseQuantity } = useCart();
@@ -54,7 +55,7 @@ function Home() {
             <div className="section-divider" />
             <p>Discover the most delicious meals with a polished ordering experience. Add favorites to your cart and checkout with confidence.</p>
           </div>
-          <PromoBanner />
+          <PromoBanner onViewFeatured={scrollToMenu} />
           <SearchBar query={searchQuery} setQuery={setSearchQuery} onSearch={setSearchQuery} />
           <div className="controls-row">
             <CategoryFilter
@@ -73,6 +74,7 @@ function Home() {
                 <option value="low">Lowest price</option>
                 <option value="high">Highest price</option>
                 <option value="popular">Popular first</option>
+                <option value="free">Free</option>
               </select>
             </div>
           </div>
@@ -104,6 +106,7 @@ function Home() {
           )}
         </section>
       </main>
+      <Footer />
     </>
   );
 }

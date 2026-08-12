@@ -15,7 +15,7 @@ function FoodCard({ item, quantity = 0, onAdd, onDecrease }) {
         <div>
           <div className="price-line">
             <h4>₹{item.price}</h4>
-            {item.popular && <span className="rating-pill">★ {item.rating || 4.8}</span>}
+            {item.popular && <span className="rating-pill">★ {item.rating || 4.5}</span>}
           </div>
           {quantity > 0 && <span className="quantity-badge">{quantity} in cart</span>}
         </div>
@@ -28,7 +28,9 @@ function FoodCard({ item, quantity = 0, onAdd, onDecrease }) {
               <button type="button" onClick={onAdd}>
                 +
               </button>
+               
             </>
+      
           ) : (
             <button type="button" onClick={onAdd}>
               Add To Cart
